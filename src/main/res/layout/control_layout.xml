@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/start_control"
+        android:background="@drawable/pwm_button_unselect"
+        android:layout_margin="10dp"
+        android:text="开始"
+        android:layout_above="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/stop_control"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:background="@drawable/stop_control_button"
+        android:layout_height="wrap_content"
+        android:text="结束"
+        android:layout_alignParentRight="true"
+         />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/linear1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:text="油门/航向"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.example.bluetoothcontroller.view.SingleControlView
+            android:id="@+id/accelerate_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </com.example.bluetoothcontroller.view.SingleControlView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/pwm_button1"
+            android:background="@drawable/pwm_button_unselect"
+            android:text="1"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/pwm_button2"
+            android:text="2"
+            android:background="@drawable/pwm_button_unselect"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/pwm_button3"
+            android:text="3"
+            android:background="@drawable/pwm_button_unselect"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/pwm_button4"
+            android:background="@drawable/pwm_button_unselect"
+            android:text="4"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        <Button
+            android:layout_margin="3dp"
+            android:id="@+id/pwm_button5"
+            android:background="@drawable/pwm_button_unselect"
+            android:text="5"
+            android:layout_width="45dp"
+            android:layout_height="45dp" />
+        <TextView
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PWM调速"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:id="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="前后/左右"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.example.bluetoothcontroller.view.SingleControlView
+            android:id="@+id/control_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </com.example.bluetoothcontroller.view.SingleControlView>
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
